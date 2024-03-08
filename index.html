@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <ul>   
+            <li><a href="#">Home</a></li>
+            <li class="bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-form">
+        <div class="form">
+            <input type="text" placeholder="Type Something">
+
+            <input type="button" value="Enter">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="box active">
+            <button class="start-action" id="start-action">Move Background</button>
+        </div>
+    </div>
+
+    <script>
+        changeBtn = document.getElementById("start-action");
+        nav = document.querySelector(".nav");
+        formContl = document.querySelector(".container-form");
+
+        changeBtn.onclick = ()=> {
+            document.body.classList.toggle("active");
+            nav.classList.toggle("active");
+            formContl.classList.toggle("active");
+
+            if(changeBtn.innerText == "Move Background") {
+                changeBtn.innerText = "Stop";
+            } else {
+                changeBtn.innerText = "Move Background"
+            }
+        }
+    </script>
+</body>
+</html>
